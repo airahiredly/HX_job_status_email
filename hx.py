@@ -3,11 +3,11 @@ import os
 from googleapiclient.discovery import build
 
 # === CONFIGURATION ===
-API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyADynlfr6qm28II06W6tp08rBOgfuSGyhs")
-SHEET_ID = os.getenv("GOOGLE_SHEET_ID", "1bNpflbQ7t-beTy4lctchmOczKoovPcckasCOhb1V9qs")
+API_KEY = os.getenv("GOOGLE_API_KEY")
+SHEET_ID = os.getenv("GOOGLE_SHEET_ID")
 NAME_RANGE_NAME = 'Recruiters!A2:A2000'
 EMAIL_RANGE_NAME = 'Recruiters!B2:B2000'
-WEBHOOK_URL = 'https://n8n-app-p68zu.ondigitalocean.app/webhook-test/b4b390c0-7ddb-462e-8923-6cf7f01c0a8f'
+WEBHOOK_URL =  os.getenv("WEBHOOK_URL")
 
 # === INITIALIZE SHEETS API ===
 service = build('sheets', 'v4', developerKey=API_KEY)
