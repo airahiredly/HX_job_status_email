@@ -23,7 +23,7 @@ EMAIL_rows = email_result.get('values', [])
 CC_rows = cc_result.get('values', [])
 
 # === SEND EACH ROW TO WEBHOOK ===
-for name_row, email_row in zip(NAME_rows, EMAIL_rows, CC_rows):
+for name_row, email_row, cc_row in zip(NAME_rows, EMAIL_rows, CC_rows):
     name = name_row[0] if name_row else ''
     email = email_row[0] if email_row else ''
     cc = cc_row[0] if cc_row else ''
