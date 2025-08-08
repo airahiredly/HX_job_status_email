@@ -1,4 +1,4 @@
-name: Run Job Recommender Script
+name: HX Job Status Update Email Script
 
 on:
   workflow_dispatch: # Manual trigger
